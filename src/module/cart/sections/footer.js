@@ -55,7 +55,7 @@ const Footer = () => {
         </Col>
         <Col md={3}>
           <p className="text-copyright">Copyright Binar 2022</p>
-          <Badge color="primary">Primary</Badge>
+          <Badge color="primary">BINAR</Badge>
         </Col>
       </Row>
     </Container>
