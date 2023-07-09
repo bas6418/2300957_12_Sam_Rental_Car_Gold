@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <Container fluid>
-      <Row className="Footer-content" style={{ marginTop: '50%' }}>
+      <Row className="Footer-content" style={{ marginTop: "auto" }}>
         <div className="col={12} col-md-3">
           <p className="adress fw-bold">Jalan Suroyo No. 161 Mayangan KotLink Probolonggo 672000</p>
 
