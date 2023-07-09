@@ -19,42 +19,46 @@ function NavbarComponent(props) {
 
   return (
     <div>
-      <Navbar light className='navbar-container' expand="md">
+      <Navbar light className="navbar-container" expand="md">
         <NavbarBrand href="/">Rental Car</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} />
-        <Collapse navbar className='navbar-section'> 
+        <Collapse navbar className="navbar-section">
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/our-seriveces/">Our Services</NavLink>
+              <NavLink href="/OurService/">Our Services</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/why-us/">Why Us</NavLink>
+              <NavLink href="/WhyUs/">Why Us</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/testimonial/">Testimonial</NavLink>
+              <NavLink href="/Testimoni/">Testimonial</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="FAQ">FAQ</NavLink>
+              <NavLink href="/Faq/">FAQ</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/cart">Cart</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
-        <Offcanvas toggle={toggleNavbar} isOpen={collapsed} direction='end'>
-          <OffcanvasHeader toggle={toggleNavbar}>
-            Rental Car
-          </OffcanvasHeader>
+        <Offcanvas toggle={toggleNavbar} isOpen={collapsed} direction="end">
+          <OffcanvasHeader toggle={toggleNavbar}>Rental Car</OffcanvasHeader>
           <OffcanvasBody>
             <Nav className="ml-auto navbar-section" navbar>
               <NavItem>
-                <NavLink href="/our-seriveces/">Our Services</NavLink>
+                <NavLink href="/OurService/">Our Services</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/why-us/">Why Us</NavLink>
+                <NavLink href="/WhyUs/">Why Us</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/testimonial/">Testimonial</NavLink>
+                <NavLink href="/Testimonial/">Testimonial</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="FAQ">FAQ</NavLink>
+                <NavLink href="/Faq">FAQ</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/cart">Cart</NavLink>
               </NavItem>
             </Nav>
           </OffcanvasBody>

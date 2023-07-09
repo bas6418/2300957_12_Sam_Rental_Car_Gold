@@ -2,40 +2,53 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 80px 10px 80px !important;
-  background-color: #F1F3FF !important;
+  background-color: #f1f3ff !important;
 }
 
-.navbar-section{
+.navbar-section {
   display: flex;
   justify-content: flex-end;
 }
 
-.hero-container{
-  padding-top:20px;
-  background-color: #F1F3FF !important;
+.hero-container {
+  padding-top: 20px;
+  background-color: #f1f3ff !important;
 }
 
-.hero-content-section{
+.hero-content-section {
   padding: 50px 60px 0px 80px !important;
 }
 
-.hero-content-section h1{
+.hero-content-section h1 {
   font-weight: 600;
 }
 
-.hero-content-section p{
+.hero-content-section p {
   font-weight: 500;
 }
 
-.hero-image-section{
+.hero-image-section {
+  padding: 0 !important;
+}
+.Service-container {
+  padding-top: 20px;
+  margin-bottom: 100px;
+  background-color: #f1f3ff !important;
+}
+
+.Service-image-section {
   padding: 0 !important;
 }
 
-.image-car{
+.Service-content-section {
+  padding: 50px 60px 0px 80px !important;
+}
+
+.image-car {
   z-index: 1;
 }
 
-.search-card{
+.search-card {
   background-color: white;
   min-height: 106px;
   border-radius: 10px;
@@ -46,9 +59,9 @@
   margin: 0 auto;
 }
 
-.search-card-section{
+.search-card-section {
   position: absolute;
-  margin-top: -50px !important; 
+  margin-top: -50px !important;
   z-index: 99 !important;
   border-radius: 10px;
   min-height: 156px;
@@ -62,7 +75,7 @@
   margin: 0 !important;
 }
 
-.input-form{
+.input-form {
   width: 208px;
 }
 
@@ -71,14 +84,19 @@ select.opt option:hover {
   background-color: red !important;
 }
 
-.button-submit-search{
+.button-submit-search {
   margin-top: 13px;
 }
 
-.display-car-section{
+.display-car-section {
   margin-top: 50px;
   padding: 0px 40px 0 40px;
   margin-bottom: 50px;
+}
+.footer-content {
+  padding-top: 20px;
+  background-color: #f1f3ff !important;
+  margin-bottom: 100% !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -88,15 +106,15 @@ select.opt option:hover {
     padding: 10px !important;
   }
 
-  .hero-content-section{
+  .hero-content-section {
     padding: 20px 20px 0 20px !important;
   }
 
-  .hero-image-section{
+  .hero-image-section {
     margin-top: 40px !important;
   }
-  
-  .image-car{
+
+  .image-car {
     width: 98vw;
     float: right;
   }
