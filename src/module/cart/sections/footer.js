@@ -7,20 +7,23 @@ import iconEmail from '../../assets/icon/icon_mail.png';
 import iconTwitter from '../../assets/icon/icon_twitter.png';
 import icontwise from '../../assets/icon/icon_twitch.png';
 import { Link } from 'react-router-dom';
+c;
 
 const Footer = () => {
   return (
     <Container fluid>
-      <Row className="Footer-content" style={{ marginTop: '50%' }}>
-        <div className="col={12} col-md-3">
-          <p className="adress fw-bold">Jalan Suroyo No. 161 Mayangan KotLink Probolonggo 672000</p>
+      <Row className="footer-container">
+        <Col sm={12} md={3} className="Footer-content-section">
+          <h6 className="adress fw-bold">
+            Jalan Suroyo No. 161 Mayangan KotLink Probolonggo 672000
+          </h6>
 
           <p>binarcarrental@gmail.com</p>
 
           <p>081-233-334-808</p>
-        </div>
-        <Col md={3}>
-          <div className="nav flex-column gap-1">
+        </Col>
+        <Col md={2} className="Footer-navlink">
+          <div className="nav flex-column gap-2">
             <Link className="nav-link" to="/OurSeriveces/">
               Ourservices
             </Link>
@@ -35,7 +38,7 @@ const Footer = () => {
             </Link>
           </div>
         </Col>
-        <Col md={3} gap={2}>
+        <Col md={3}>
           <p className="text-sosmed">Connect with us</p>
           <Link>
             <img src={iconFacebook} alt="icon_Facebook" />
@@ -55,7 +58,7 @@ const Footer = () => {
         </Col>
         <Col md={3}>
           <p className="text-copyright">Copyright Binar 2022</p>
-          <Badge color="primary">Primary</Badge>
+          <Badge color="primary text-center">Binar</Badge>
         </Col>
       </Row>
     </Container>

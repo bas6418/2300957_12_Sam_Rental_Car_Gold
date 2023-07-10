@@ -1,6 +1,16 @@
 import React, { useRef } from 'react';
-import { Badge, CardBody, CardText, CardTitle, Col, Container, Row } from 'reactstrap';
-import { SwiperSlide } from 'swiper/react';
+import {
+  Badge,
+  CardBody,
+  CardText,
+  CardTitle,
+  Col,
+  Container,
+  Row,
+  Card,
+  Button,
+} from 'reactstrap';
+import { SwiperSlide, Swiper } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 
@@ -19,23 +29,23 @@ export default function Testi() {
             <p className="fs-5 text-center">Berbagai review positif dari para pelanggan kami</p>
           </Col>
         </Row>
-        <Container className="scroll-container swiper" id="cardContainer">
-          <swiper
+        <div className="scroll-container Swiper" id="cardContainer" style={{ width: '740px' }}>
+          <Swiper
             spaceBetween={50}
             slidePerview={1}
-            onSwiper={swiper => {
-              swiperRef.current = swiper;
+            onSwiper={Swiper => {
+              swiperRef.current = Swiper;
             }}
             className="mySwiper"
           >
-            <swiper className="mySwiper">
+            <Swiper className="mySwiper">
               <SwiperSlide>
-                <card className="mb-3 swiper-slide" id="card-content" style={{ width: '740px' }}>
+                <Card className="mb-3 swiper-slide" id="card-content">
                   <Row g={0}>
                     <Col md={4}>
                       <img src={Image_photo} alt="profile-testimoni" className="img-fluid" />
                     </Col>
-                    <Col md={4}>
+                    <Col md={8}>
                       <CardBody>
                         <CardTitle>
                           <img src={IconRate} alt="icon-rate" />
@@ -51,15 +61,15 @@ export default function Testi() {
                       </CardBody>
                     </Col>
                   </Row>
-                </card>
+                </Card>
               </SwiperSlide>
               <SwiperSlide>
-                <card className="mb-3 swiper-slide" id="card-content" style={{ width: '740px' }}>
+                <Card className="mb-3 swiper-slide" id="card-content" style={{ width: '740px' }}>
                   <Row g={0}>
                     <Col md={4}>
                       <img src={Image_photo} alt="profile-testimoni" className="img-fluid" />
                     </Col>
-                    <Col md={4}>
+                    <Col md={8}>
                       <CardBody>
                         <CardTitle>
                           <img src={IconRate} alt="icon-rate" />
@@ -75,15 +85,19 @@ export default function Testi() {
                       </CardBody>
                     </Col>
                   </Row>
-                </card>
+                </Card>
               </SwiperSlide>
               <SwiperSlide>
-                <card className="mb-3 swiper-slide" id="card-content" style={{ width: '740px' }}>
+                <Card
+                  className="mb-3 swiper-slide"
+                  id="card-content"
+                  style={{ width: '740px !important' }}
+                >
                   <Row g={0}>
                     <Col md={4}>
                       <img src={Image_photo} alt="profile-testimoni" className="img-fluid" />
                     </Col>
-                    <Col md={4}>
+                    <Col md={8}>
                       <CardBody>
                         <CardTitle>
                           <img src={IconRate} alt="icon-rate" />
@@ -99,30 +113,31 @@ export default function Testi() {
                       </CardBody>
                     </Col>
                   </Row>
-                </card>
+                </Card>
               </SwiperSlide>
-            </swiper>
-          </swiper>
-          <div className="button-active ">
-            <button
+            </Swiper>
+          </Swiper>
+
+          <div className="Button-active ">
+            <Button
               color="primary"
               outline
               id="scroll-left"
-              onClick={() => swiperRef.current.slidePerv()}
+              onClick={() => swiperRef.current.slidePrev()}
             >
               <Badge>{'<'}</Badge>
-            </button>
+            </Button>
 
-            <button
+            <Button
               color="primary"
               outline
               id="scroll-right"
               onClick={() => swiperRef.current.slideNext()}
             >
               <Badge>{'>'}</Badge>
-            </button>
+            </Button>
           </div>
-        </Container>
+        </div>
       </Container>
     </section>
   );

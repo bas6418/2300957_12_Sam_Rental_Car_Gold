@@ -187,7 +187,7 @@ export default function SearchSection() {
                 onClick={() => {
                   setIsSubmited(false);
                   setData([]);
-                  fetchDataDetail(null);
+                  fetchData([null]);
                 }}
               >
                 Edit
@@ -290,11 +290,15 @@ export default function SearchSection() {
       )}
       {DataDetail && (
         <section id="datail-car" style={{ marginBottom: '100px' }}>
-          <div> Nama mobil: {DataDetail.name}</div>
-          <div>Harga/hari: {formatToIDR(DataDetail.price)}</div>
-          <div>
-            <img alt={dataDetail.name} src={DataDetail.image} />
-          </div>
+          <Row>
+            <Col>
+              <div> Nama mobil: {DataDetail.name}</div>
+              <div>Harga/hari: {formatToIDR(DataDetail.price)}</div>
+            </Col>
+            <div>
+              <img alt={DataDetail.name} src={DataDetail.image} />
+            </div>
+          </Row>
         </section>
       )}
     </Container>

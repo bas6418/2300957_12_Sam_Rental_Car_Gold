@@ -31,8 +31,7 @@
   padding: 0 !important;
 }
 .Service-container {
-  padding-top: 20px;
-  margin-bottom: 100px;
+  padding-left: 50px;
   background-color: #f1f3ff !important;
 }
 
@@ -48,6 +47,10 @@
   z-index: 1;
 }
 
+.image-fluid {
+  z-index: 1;
+  margin-left: 100px !important;
+}
 .search-card {
   background-color: white;
   min-height: 106px;
@@ -93,10 +96,22 @@ select.opt option:hover {
   padding: 0px 40px 0 40px;
   margin-bottom: 50px;
 }
-.footer-content {
+.footer-container {
   padding-top: 20px;
   background-color: #f1f3ff !important;
-  margin-bottom: 100% !important;
+}
+
+.footer-content-section {
+  padding: 50px 60px 0px 80px !important;
+}
+
+.Footer-navlink {
+  gap: 2px !important;
+}
+
+.list-whyus-section {
+  align-items: stretch;
+  margin-top: 30px !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -117,5 +132,12 @@ select.opt option:hover {
   .image-car {
     width: 98vw;
     float: right;
+  }
+  .footer-container {
+    padding-top: 20px;
+    background-color: #f1f3ff !important;
+  }
+  .footer-content-section {
+    padding: 50px 60px 0px 80px !important;
   }
 }

@@ -3,7 +3,7 @@ import { Container, Row } from 'reactstrap';
 
 export default function Faq() {
   return (
-    <Container xl>
+    <Container fluid>
       <div className="container-hero">
         <div className="row text-center bg-primary" style={{ marginTop: '5rem' }}>
           <h2 className="display-5 pt-4 text-white justify-content-center mt-3">

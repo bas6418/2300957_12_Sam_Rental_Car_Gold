@@ -11,6 +11,7 @@ import {
   CardBody,
   CardTitle,
   CardText,
+  List,
 } from 'reactstrap';
 import { API } from '../../../common/API';
 
@@ -63,6 +64,18 @@ export default function SearchSection() {
         return 'minPrice=400000&maxPrice=600000';
       case 'high':
         return 'minPrice=600000&maxPrice=1000000';
+      default:
+        return '';
+    }
+  };
+  const mappingCategory = category => {
+    switch (category) {
+      case 'small':
+        return '2-4 orang';
+      case 'medium':
+        return '4-6 orang';
+      case 'high':
+        return '6-8 orang';
       default:
         return '';
     }
@@ -246,9 +259,54 @@ export default function SearchSection() {
         )}
         {DataDetail && (
           <section id="datail-car" style={{ marginBottom: '100px' }}>
-            <div> Nama mobil: {DataDetail.name}</div>
-            <div>Kategory:{DataDetail.category}</div>
-            <div> Harga/hari : {formatToIDR(DataDetail.price)}</div>
+            <Row>
+              <Col>
+                <Card>
+                  <CardBody>
+                    <h5>Tentang Paket</h5>
+                    <h5>Include</h5>
+                    <List>
+                      <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
+                      <li>Sudah termasuk bensin selama 12 jam </li>
+                      <li>Sudah termasuk Tiket Wisata Sudah</li>
+                      <li>termasuk pajak</li>
+                    </List>
+                    <h5>Refund,Reschedule,Overtime</h5>
+                    <list>
+                      <li>Tidak termasuk biaya makan sopir Rp. 75.00/hari</li>
+                      <li>
+                        Jika over time lebih dari 12 jam akan ada tambahan biaya Rp.20.000/hari
+                      </li>
+                      <li>Tidak termasuk akomodasi penginapan</li>
+                    </list>
+                    <h5>Exclude</h5>
+                    <list>
+                      <li>Tidak termasuk biaya makan sopir Rp. 75.00/hari</li>
+                      <li>
+                        Jika over time lebih dari 12 jam akan ada tambahan biaya Rp.20.000/hari
+                      </li>
+                      <li>Tidak termasuk akomodasi penginapan</li>
+                      <li>Tidak termasuk biaya makan sopir Rp. 75.00/hari</li>
+                      <li>
+                        Jika over time lebih dari 12 jam akan ada tambahan biaya Rp.20.000/hari
+                      </li>
+                      <li>Tidak termasuk akomodasi penginapan</li>
+                    </list>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col>
+                <Card>
+                  <CardBody>
+                    <img alt={DataDetail.name} src={DataDetail.image} />
+                  </CardBody>
+                </Card>
+
+                <div> {DataDetail.name}</div>
+                <div>Kategory:{DataDetail.category}</div>
+                <div> Harga/hari : {formatToIDR(DataDetail.price)}</div>
+              </Col>
+            </Row>
           </section>
         )}
       </section>

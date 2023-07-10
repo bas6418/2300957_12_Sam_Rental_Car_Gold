@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import imageService from '../../../assets/img/img_service.png';
 
 export default function ServiceSection() {
   return (
-    <Container fluid>
+    <Container fluid="xl">
       <Row ClassName="Service-container">
         <Col sm={12} md={6} className="Service-image-section">
-          <img src="/assets/img/img_service.png" className="img-fluid" alt="Our Service" />
+          <img src={imageService} className="img-fluid" alt="Our Service" />
         </Col>
         <Col sm={12} md={6} className="Service-content-section">
           <h2>Best Car Rental for any kind of trip in (Lokasimu)!</h2>

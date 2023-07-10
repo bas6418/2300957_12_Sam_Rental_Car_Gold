@@ -1,16 +1,16 @@
 import React from 'react';
-import { Container } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import iconJempol from '../../../assets/icon/jempol.jpg';
 import IconPrice from '../../../assets/icon/icon_price.jpg';
 import icon24 from '../../../assets/icon/icon_24hrs.png';
 import iconProf from '../../../assets/icon/icon_professional.png';
 export default function Why() {
   return (
-    <Container fluid>
-      <h3 className="text-left pt-4 ">Why Us ?</h3>
-      <p>Mengapa Harus pilih Binnar Car Rental ?</p>
+    <Container fluid="lg">
+      <h3 className="whyus-text ">Why Us ?</h3>
+      <p className="whyus-section-text">Mengapa Harus pilih Binnar Car Rental ?</p>
 
-      <div className="row">
+      <Row>
         <div className="col-12 col-md-3 align-items-stretch mt-3">
           <div className="card">
             <div className="card-body">
@@ -56,7 +56,7 @@ export default function Why() {
             </div>
           </div>
         </div>
-      </div>
+      </Row>
     </Container>
   );
 }
