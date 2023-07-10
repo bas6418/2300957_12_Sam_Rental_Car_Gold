@@ -304,13 +304,21 @@ export default function SearchSection() {
               <Col>
                 <Card>
                   <CardBody>
-                    <img alt={DataDetail.name} src={DataDetail.image} />
+                    <div className="nama-mobil">
+                     
+                      <img alt={DataDetail.name} src={DataDetail.image} />
+                    </div>
                   </CardBody>
                 </Card>
 
-                <div> {DataDetail.name}</div>
-                <div>Kategory: {pilihKategory(DataDetail.category)}</div>
-                <div> Harga/hari : {formatToIDR(DataDetail.price)}</div>
+                <div className="nama-mobil"> {DataDetail.name}</div>
+                <div>{pilihKategory(DataDetail.category)}</div>
+                <Row className="detail-car">
+                  <Col>
+                    <h5>Total</h5>
+                  </Col>
+                  <Col>:{formatToIDR(DataDetail.price)}</Col>
+                </Row>
               </Col>
             </Row>
           </section>
