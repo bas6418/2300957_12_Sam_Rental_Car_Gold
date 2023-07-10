@@ -1,17 +1,17 @@
-import { Fragment, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import {
-  Container,
-  Input,
-  Label,
-  FormGroup,
   Button,
-  Col,
-  Row,
   Card,
   CardBody,
-  CardTitle,
   CardText,
+  CardTitle,
+  Col,
+  Container,
+  FormGroup,
+  Input,
+  Label,
   List,
+  Row,
 } from 'reactstrap';
 import { API } from '../../../common/API';
 
@@ -24,6 +24,7 @@ export default function SearchSection() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmited] = useState(false);
   const [DataDetail, setDataDetail] = useState(null);
+  const [detailState, setDetailState] = useState(false);
 
   const fetchData = () => {
     const params = `name=${nameCar}&category=${category}&isRented=${isRented}&${mappingPrice(
@@ -68,7 +69,7 @@ export default function SearchSection() {
         return '';
     }
   };
-  const mappingCategory = category => {
+  const pilihKategory = category => {
     switch (category) {
       case 'small':
         return '2-4 orang';
@@ -91,9 +92,13 @@ export default function SearchSection() {
     e.preventDefault();
     setIsSubmited(true);
     setIsLoading(true);
+    setDetailState(false);
 
     fetchData();
   };
+  React.useEffect(() => {
+    console.log(DataDetail);
+  }, [DataDetail]);
 
   return (
     <Container fluid className="search-card-section">
@@ -245,6 +250,7 @@ export default function SearchSection() {
                           onClick={() => {
                             fetchDataDetail(car.id);
                             setData([]);
+                            setDetailState(true);
                           }}
                         >
                           Pilih Mobil
@@ -257,7 +263,7 @@ export default function SearchSection() {
             })}
           </Row>
         )}
-        {DataDetail && (
+        {DataDetail && detailState && (
           <section id="datail-car" style={{ marginBottom: '100px' }}>
             <Row>
               <Col>
@@ -303,7 +309,7 @@ export default function SearchSection() {
                 </Card>
 
                 <div> {DataDetail.name}</div>
-                <div>Kategory:{DataDetail.category}</div>
+                <div>Kategory: {pilihKategory(DataDetail.category)}</div>
                 <div> Harga/hari : {formatToIDR(DataDetail.price)}</div>
               </Col>
             </Row>

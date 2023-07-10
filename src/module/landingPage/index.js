@@ -1,16 +1,15 @@
 import Layout from '../../components/layout';
-import Why from './sections/WhyUs';
+import Faq from './sections/Faq';
 import HeroSection from './sections/HeroSection';
 import ServiceSection from './sections/OurServiceSection';
 import Testi from './sections/Testimonial';
-import Faq from './sections/Faq';
-
+import WhyUs from './sections/WhyUs';
 export default function Hero() {
   return (
     <Layout>
       <HeroSection />
       <ServiceSection />
-      <Why />
+      <WhyUs />
       <Testi />
       <Faq />
     </Layout>

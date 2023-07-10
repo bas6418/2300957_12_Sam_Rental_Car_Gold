@@ -10,8 +10,8 @@ import icontwise from '../../assets/icon/icon_twitch.png';
 const Footer = () => {
   return (
     <Container fluid>
-      <Row className="Footer-container">
-        <Col sm={12} md={3} className="Footer-content-section">
+      <Row className="footer-container">
+        <Col sm={12} md={3} className="footer-content-section">
           <h6 className="adress fw-bold">
             Jalan Suroyo No. 161 Mayangan KotLink Probolonggo 672000
           </h6>
@@ -20,7 +20,7 @@ const Footer = () => {
 
           <p>081-233-334-808</p>
         </Col>
-        <Col md={2} className="Footer-navlink">
+        <Col md={2} className="footer-navlink">
           <div className="nav flex-column gap-2">
             <Link className="nav-link" to="/OurSeriveces/">
               Ourservices

@@ -3,8 +3,8 @@ import { Container, Row } from 'reactstrap';
 
 export default function Faq() {
   return (
-    <Container fluid>
-      <div className="container-hero">
+    <Container>
+      <div className="container-hero my-5">
         <div className="row text-center bg-primary" style={{ marginTop: '5rem' }}>
           <h2 className="display-5 pt-4 text-white justify-content-center mt-3">
             Sewa Mobil di (Lokasimu) Sekarang
@@ -22,7 +22,7 @@ export default function Faq() {
           </div>
         </div>
       </div>
-      <Row className="row-col-md-6 -lg-2 ">
+      <Row className="row-col-md-6 -lg-2 my-5">
         <div className="col-12 col-md-5">
           <h3 className="fw-bold">Frequently Asked Question</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut,</p>

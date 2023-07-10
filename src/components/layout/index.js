@@ -6,6 +6,7 @@ export default function Layout({ children }) {
     <>
       <NavbarComponent />
       <div>{children}</div>
+
       <Footer />
     </>
   );

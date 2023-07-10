@@ -1,64 +1,53 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import imageService from '../../../assets/img/img_service.png';
 
 export default function ServiceSection() {
   return (
-    <Container fluid="xl">
-      <Row ClassName="Service-container">
-        <Col sm={12} md={6} className="Service-image-section">
-          <img src={imageService} className="img-fluid" alt="Our Service" />
-        </Col>
-        <Col sm={12} md={6} className="Service-content-section">
-          <h2>Best Car Rental for any kind of trip in (Lokasimu)!</h2>
+    <div className="container mt-5 mb-5">
+      <div className="row justify-content-center">
+        {/* LEFT IMG */}
+        <div className="col-md-5 p-5">
+          <img src="/assets/img/img-service.png" alt="img aset in the left" />
+        </div>
+        {/* RIGHT DESC */}
+        <div className="col-md-5">
+          <h1>Best Car Rental for any kind of trip in Karawang!</h1>
           <p>
             Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih murah dibandingkan
             yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata,
             bisnis, wedding, meeting, dll.
           </p>
-          <ul className="d-flex flex-row mb-1" style={{ paddingLeft: '5px !important' }}>
-            <div>
-              <img src="/assets/icon/ceklist.jpg" alt="ceklist" className="img-thumbnail" />
+          <div className="d-flex align-items-center text-center mb-3">
+            <div className="mx-3">
+              <img src="/assets/svg/checklist.svg" alt="checklist" srcset="" />
             </div>
-
-            <div>
-              <p>Sewa mobil Lepas Kunci di Bali 12 Jam</p>
+            <p>Sewa Mobil Dengan Supir di Bali 12 Jam</p>
+          </div>
+          <div className="d-flex align-items-center text-center mb-3">
+            <div className="mx-3">
+              <img src="/assets/svg/checklist.svg" alt="checklist" srcset="" />
             </div>
-          </ul>
-          <ul className="d-flex flex-row mb-1" style={{ paddingLeft: '5px !important' }}>
-            <div>
-              <img src="/assets/icon/ceklist.jpg" alt="ceklist" className="img-thumbnail" />
+            <p>Sewa Mobil Lepas Kunci di Bali 24 Jam</p>
+          </div>
+          <div className="d-flex align-items-center text-center mb-3">
+            <div className="mx-3">
+              <img src="/assets/svg/checklist.svg" alt="checklist" srcset="" />
             </div>
-            <div>
-              <p>Sewa mobil Lepas Kunci di Bali 24 Jam</p>
+            <p>Sewa Mobil Jangka Panjang Bulanan</p>
+          </div>
+          <div className="d-flex align-items-center text-center mb-3">
+            <div className="mx-3">
+              <img src="/assets/svg/checklist.svg" alt="checklist" srcset="" />
             </div>
-          </ul>
-          <ul className="d-flex flex-row mb-1" style={{ paddingLeft: '5px !important' }}>
-            <div>
-              <img src="/assets/icon/ceklist.jpg" alt="ceklist" className="img-thumbnail" />
+            <p>Gratis Antar - Jemput Mobil di Bandara</p>
+          </div>
+          <div className="d-flex align-items-center text-center mb-3">
+            <div className="mx-3">
+              <img src="/assets/svg/checklist.svg" alt="checklist" srcset="" />
             </div>
-            <div>
-              <p>Sewa mobil jangka Panjang Bulanan</p>
-            </div>
-          </ul>
-          <ul className="d-flex flex-row mb-1" style={{ paddingLeft: '5px !important' }}>
-            <div>
-              <img src="/assets/icon/ceklist.jpg" alt="ceklist" className="img-thumbnail" />
-            </div>
-            <div>
-              <p>Gratis Antar-Jemput Mobil di Bandar</p>
-            </div>
-          </ul>
-          <ul className="d-flex flex-row mb-1" style={{ paddingLeft: '5px !important' }}>
-            <div>
-              <img src="/assets/icon/ceklist.jpg" alt="ceklist" className="img-thumbnail" />
-            </div>
-            <div>
-              <p>Layanan Airport Transfer/Drop in Out</p>
-            </div>
-          </ul>
-        </Col>
-      </Row>
-    </Container>
+            <p>Layanan Airport Transfer / Drop In Out</p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
