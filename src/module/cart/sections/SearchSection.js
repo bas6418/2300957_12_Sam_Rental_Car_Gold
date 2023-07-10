@@ -305,12 +305,11 @@ export default function SearchSection() {
                 <Card>
                   <CardBody>
                     <div className="nama-mobil">
-                     
+                   
                       <img alt={DataDetail.name} src={DataDetail.image} />
                     </div>
                   </CardBody>
                 </Card>
-
                 <div className="nama-mobil"> {DataDetail.name}</div>
                 <div>{pilihKategory(DataDetail.category)}</div>
                 <Row className="detail-car">
